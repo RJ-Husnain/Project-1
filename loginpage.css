@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: "Nunito", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+/* Display Flex Class */
+.flex{
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: center;
+    flex-direction: column;
+}
+/* container */
+.container{
+    width: 55%;
+    height: 100%;
+    background-color:#d3e5f1;
+    align-items: center;
+    gap: 15px;
+}
+.form{
+    gap: 15px;
+}
+/* heading */
+.headings h1{
+ font-size: 50px;
+ font-weight: 800;
+ color:#2995ee;
+}
+.headings h6{
+ font-size: 11px;
+ font-weight: 600;
+}
+.headings h6 a{
+ text-decoration: none;
+ color: #2995ee;
+ font-weight: 800;
+}
+/* form  */
+
+/* input types styling */
+.form input[type="text"],
+.form input[type="password"]{
+  width: 380px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+}
+
+ .form input:active{
+    outline: none;
+    border-color: #0f97f1 ;
+    box-shadow: 0 0 8px rgba(37, 173, 252, 0.2);
+  }
+/* Submit Button  */
+.form button {
+    margin: 12px auto;
+    border: 2px solid blueviolet;
+    width: 35%;
+    padding: 6px 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(to left, #09fafa, #0856bb);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .form button:hover {
+    background: linear-gradient(to left, #2575fc,  #09fafa);
+    transform: scale(1.05);
+  }
+/* forget password */
+.fwpassword{
+   font-size: 14px;
+   display: flex;
+   justify-content: space-between;
+   padding: 5px 10px 2px 10px;
+}
+.fwpassword a{
+    color: #0f97f1;
+}
+.wrong{
+    color: rgb(255, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+/* image Container */
+.image_container{
+    width: 45%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.image_container img{
+    width: 550px;
+}
