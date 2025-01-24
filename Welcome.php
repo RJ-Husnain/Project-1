@@ -37,7 +37,7 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
             <div class="cross">
                 <img src="cross.svg" alt="" class="close" id="Eclose">
             </div>
-            <form action="welcome.php" method="Post">
+            <form action="welcome.php" method="POST">
                 <div>
                     <h3>Add New Field</h3>
                 </div>
@@ -56,7 +56,7 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
             <div class="cross">
                 <img src="cross.svg" alt="" class="close" id="Rclose">
             </div>
-            <form action="welcome.php" method="Get">
+            <form action="welcome.php" method="GET">
                 <div>
                     <h3>Add New Field</h3>
                 </div>
