@@ -199,8 +199,47 @@ body{
   width: 20px;
  }  */
 .actualPage{
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   width: 82vw;
   height: 93.3vh;
   padding: 12px;
 }
+/* Container */
+.containerBox{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 23px;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+.boxActualpage{
+width: 30%;
+height: 30%;
+background-color: #d3e5f1;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+flex-direction: column;
+padding: 10px;
+color: rgb(0, 0, 0);
+font-weight: 500;
+border-radius: 15px;
+}
+.line{
+  width: 100%;
+display: flex;
+justify-content: center;
+/* align-items: center; */
+
+}
+/* .expenseBox{
+
+}
+.incomeBox{
+
+}
+.balanceBox{
+
+} */
