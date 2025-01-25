@@ -166,6 +166,7 @@ body{
   color: rgb(3, 44, 97);
   font-weight: 400;
   margin-top: 15px;
+
 }
 
 .sidebar .expensebtn {
@@ -202,37 +203,50 @@ body{
   /* background-color: rgb(255, 255, 255); */
   width: 82vw;
   height: 93.3vh;
-  padding: 12px;
+  /* padding: 12px; */
+  background-color: rgb(188, 146, 241);
+  border: 2px solid red;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 40px ;
 }
 /* Container */
 .containerBox{
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   gap: 23px;
-  margin-top: 10px;
   width: 100%;
-  height: 100%;
+  /* border: 2px solid purple; */
+  min-height: 30%;  
 }
 .boxActualpage{
 width: 30%;
-height: 30%;
+height: 100%;
 background-color: #d3e5f1;
 display: flex;
 justify-content: flex-start;
 align-items: center;
 flex-direction: column;
-padding: 10px;
-color: rgb(0, 0, 0);
-font-weight: 500;
 border-radius: 15px;
 }
+.boxActualpage .heading{
+font-weight: 600;
+margin:5px;
+font-size: 17px;
+}
 .line{
-  width: 100%;
+width: 100%;
 display: flex;
-justify-content: center;
-/* align-items: center; */
-
+align-items: center;
+justify-content: space-between;
+gap: 90px;
+font-size: 16px;
+color: rgb(61, 61, 61);
+font-weight: 400;
 }
 /* .expenseBox{
 
@@ -243,3 +257,17 @@ justify-content: center;
 .balanceBox{
 
 } */
+
+/* Quick Access Box */
+.quickAccess{
+  width: 100%;
+  height: 15%;
+  background-color: #d3e5f1;
+  /* border: 2px solid darkcyan; */
+  padding: 10px 25px;
+  border-radius: 15px;
+}
+.quickAccess .heading{
+  font-size: 14px;
+  font-weight: 450;
+}

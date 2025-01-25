@@ -124,7 +124,7 @@
                             <p>Electricity Expensive</p>
                         </li>
                         <li>
-                        <?php
+                            <?php
                             // if(mysqli_num_rows($result_expense_data) > 0) {
                             //   while ($row = mysqli_fetch_assoc($result_expense_data)) {
                             //     echo '<p>' . $row['catagory']. '</p>';
@@ -153,7 +153,7 @@
                             <p>Buisness Profit</p>
                         </li>
                         <li>
-                        <?php
+                            <?php
                             // if(mysqli_num_rows($result_income_data) > 0) {
                             //   while ($row = mysqli_fetch_assoc($result_income_data)) {
                             //     echo '<p>' . $row['catagory']. '</p>';
@@ -169,34 +169,52 @@
             </div>
         </div>
         <div class="actualPage">
-        <div class="containerBox">
-            <div class="expenseBox boxActualpage">
-                <div class="heading">
-                    <p> Expense</p>  
+            <div class="containerBox">
+                <div class="expenseBox boxActualpage">
+                    <div class="heading">
+                        <p> Expense</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="line">
+                                <div>Food Expense</div>
+                                <div>2000</div>
+                            </li>
+                            <li class="line">
+                                <div>Electricity Expense</div>
+                                <div>4500</div>
+                            </li>
+                            <li class="line">
+                                <div>Rent Expense</div>
+                                <div>5000</div>
+                            </li>
+                            <li class="line">
+                                <div>Food Expense</div>
+                                <div>4500</div>
+                            </li>
+                            <li class="line">
+                                <div>Transport Expense</div>
+                                <div>4500</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        <li class="line">
-                            <div>Food Expense</div>
-                            <div>4500</div>
-                        </li>
-                    </ul>
+                <div class="incomeBox boxActualpage">
+                    <div class="heading">
+                        <p> Income</p>
+                    </div>
+                </div>
+                <div class="balanceBox boxActualpage">
+                    <div class="heading">
+                        <p> Balance</p>
+                    </div>
                 </div>
             </div>
-            <div class="incomeBox boxActualpage">
-            <div class="heading">
-                    <p> Income</p>   
-                </div>
+            <div class="quickAccess">
+                  <div class="heading">
+                     <p>Quick Access</p>
+                  </div>
             </div>
-            <div class="balanceBox boxActualpage">
-            <div class="heading">
-                    <p> Balance</p>  
-                </div>
-            </div>
-        </div>
-        <div class="quickAccess">
-            
-        </div>
         </div>
     </div>
     <script src="welcome.js"></script>
