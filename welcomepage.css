@@ -175,8 +175,8 @@ body{
 }
 .sidebar .expensebtn button{
   margin-top: 12px;
-  background-color: rgb(4, 202, 37);
-  /* background-color: #ffffff; */
+  /* background-color: rgb(4, 202, 37); */
+  background-color: #597be9;
   border: none;
   padding: 2px 8px 0px 8px;
   border-radius: 15px;
@@ -188,8 +188,8 @@ body{
 }
 .sidebar .resourcebtn button{
   margin-top: 12px;
-  background-color: rgb(4, 202, 37);
-  /* background-color: #ffffff; */
+  /* background-color: rgb(4, 202, 37); */
+  background-color: #597be9;
   border: none;
   padding: 2px 8px 0px 8px;
   border-radius: 15px;
@@ -204,13 +204,11 @@ body{
   width: 82vw;
   height: 93.3vh;
   /* padding: 12px; */
-  background-color: rgb(188, 146, 241);
-  border: 2px solid red;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
   padding: 15px 40px ;
 }
 /* Container */
@@ -261,13 +259,134 @@ font-weight: 400;
 /* Quick Access Box */
 .quickAccess{
   width: 100%;
-  height: 15%;
+  height: 13%;
   background-color: #d3e5f1;
   /* border: 2px solid darkcyan; */
   padding: 10px 25px;
   border-radius: 15px;
 }
 .quickAccess .heading{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 450;
+  height: 20%;
+}
+/* Btn Bar */
+.btnbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 80%;
+}
+.btnbar button{
+  color: #ffffff;
+  /* background-color: #006250; */
+  background-color: #597be9;
+  border: none;
+  border-radius: 20px;  
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+/* Graph Box */
+.graphBox{
+  width: 100%;
+  background-color: #d3e5f1;
+  height: 48%;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+.graphBox .heading{
+  font-weight: 18px;
+  font-weight: 500;
+  border-bottom: 2px solid rgb(124, 124, 124);
+  padding: 0px 0px 7px 5px;
+
+}
+.graphBox .graphbar{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 10px;
+  height: 80%;
+  padding: 5px;
+  gap: 5px;
+}
+.graphBox .graphbar .expense, .graphBox .graphbar .income{
+  width: 50%;
+  height: 100%;
+}
+/* Graphs */
+.chart-container {
+  width: 90%;
+  height: 110%;
+  background-color: #e5f2f9;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+}
+/* Title */
+.title{
+  position: absolute;
+  top: 10px;
+  right:200px;
+  font-weight: 500;
+}
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 200px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding: 10px;
+  position: relative;
+}
+
+.bar {
+  width: 30px;
+  margin: 0 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar div {
+  width: 100%;
+  background-color: #597be9;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.bar .bar-inner {
+  height: 100px;
+}
+
+.bar.white-bar .bar-inner {
+  background-color: #e5f2f9;
+  border: 2px solid #597be9;
+}
+
+.bar-label {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  /* padding: 10px; */
+  color: white;
+}
+
+.y-axis-labels {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.y-axis-labels span {
+  font-size: 12px;
 }

@@ -181,6 +181,56 @@
                                 <div>2000</div>
                             </li>
                             <li class="line">
+                                <div>Rent Expense</div>
+                                <div>4500</div>
+                            </li>
+                            <li class="line">
+                                <div>Transport Expense</div>
+                                <div>5000</div>
+                            </li>
+                            <li class="line">
+                                <div>Health Expense</div>
+                                <div>4500</div>
+                            </li>
+                            <li class="line">
+                                <div>Electricity Expense</div>
+                                <div>4500</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="incomeBox boxActualpage">
+                    <div class="heading">
+                        <p> Income</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="line">
+                                <div>Salary</div>
+                                <div>2000</div>
+                            </li>
+                            <li class="line">
+                                <div>Buisness Profit</div>
+                                <div>4500</div>
+                            </li>
+                            <li class="line">
+                                <div>Others</div>
+                                <div>5000</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="balanceBox boxActualpage">
+                    <div class="heading">
+                        <p> Balance</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="line">
+                                <div>Food Expense</div>
+                                <div>2000</div>
+                            </li>
+                            <li class="line">
                                 <div>Electricity Expense</div>
                                 <div>4500</div>
                             </li>
@@ -199,21 +249,151 @@
                         </ul>
                     </div>
                 </div>
-                <div class="incomeBox boxActualpage">
-                    <div class="heading">
-                        <p> Income</p>
-                    </div>
-                </div>
-                <div class="balanceBox boxActualpage">
-                    <div class="heading">
-                        <p> Balance</p>
-                    </div>
-                </div>
             </div>
             <div class="quickAccess">
-                  <div class="heading">
-                     <p>Quick Access</p>
-                  </div>
+                <div class="heading">
+                    <p>Quick Access</p>
+                </div>
+                <div class="btnbar">
+                    <button>Add Expense</button>
+                    <button>Add Income</button>
+                    <button>Create Report</button>
+                </div>
+            </div>
+            <div class="graphBox">
+                <div class="heading">
+                    <p>Graphs Monitoring</p>
+                </div>
+                <div class="graphbar">
+                    <div class="expense">
+                        <div class="chart-container">
+                            <div class="title">
+                                <p>Expense Graph</p>
+                            </div>
+                            <div class="chart">
+                                <div class="y-axis-labels">
+                                    <span>6k</span>
+                                    <span>4k</span>
+                                    <span>2k</span>
+                                    <span>0</span>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 120px;"></div>
+                                    <div class="bar-label">Jan</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 50px;"></div>
+                                    <div class="bar-label">Feb</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 160px;"></div>
+                                    <div class="bar-label">Mar</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 70px;"></div>
+                                    <div class="bar-label">Apr</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 140px;"></div>
+                                    <div class="bar-label">May</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 70px;"></div>
+                                    <div class="bar-label">Jun</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 90px;"></div>
+                                    <div class="bar-label">July</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 60px;"></div>
+                                    <div class="bar-label">Aug</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 120px;"></div>
+                                    <div class="bar-label">Sep</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 90px;"></div>
+                                    <div class="bar-label">Oct</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 40px;"></div>
+                                    <div class="bar-label">Nov</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 160px;"></div>
+                                    <div class="bar-label">Dec</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="income">
+                        <div class="chart-container">
+                            <div class="title">
+                                <p>Income Graph</p>
+                            </div>
+                            <div class="chart">
+                                <div class="y-axis-labels">
+                                    <span>6k</span>
+                                    <span>4k</span>
+                                    <span>2k</span>
+                                    <span>0</span>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 120px;"></div>
+                                    <div class="bar-label">Jan</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 50px;"></div>
+                                    <div class="bar-label">Feb</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 160px;"></div>
+                                    <div class="bar-label">Mar</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 70px;"></div>
+                                    <div class="bar-label">Apr</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 140px;"></div>
+                                    <div class="bar-label">May</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 70px;"></div>
+                                    <div class="bar-label">Jun</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 90px;"></div>
+                                    <div class="bar-label">July</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 60px;"></div>
+                                    <div class="bar-label">Aug</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 120px;"></div>
+                                    <div class="bar-label">Sep</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 90px;"></div>
+                                    <div class="bar-label">Oct</div>
+                                </div>
+                                <div class="bar">
+                                    <div class="bar-inner" style="height: 40px;"></div>
+                                    <div class="bar-label">Nov</div>
+                                </div>
+                                <div class="bar white-bar">
+                                    <div class="bar-inner" style="height: 160px;"></div>
+                                    <div class="bar-label">Dec</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
