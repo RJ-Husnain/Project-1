@@ -1,31 +1,31 @@
 <?php
-//     include'_dbconnect.php';
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     if (isset($_POST['expense'])) {
-//         $expense = $_POST['expense'];
-//     }else{
-//         $expense = "";
-//     }
-//     $expenseSql = "INSERT INTO `expense` (`catagory`) VALUES ('$expense')";
-//     $expenseResult = mysqli_query($conn, $expenseSql);   
-//     if (!$expenseResult) {
-//         echo "Record was not inserted Successfully due to ". mysqli_error($expenseResult);
-//     }
-//     if (isset($_POST['income'])) {
-//         $income = $_POST['income'];
-//     }else{
-//         $income = "";
-//     }
-//     $incomeSql = "INSERT INTO `income` (`catagory`) VALUES ('$income')";
-//     $incomeResult = mysqli_query($conn, $incomeSql);   
-//     if (!$incomeResult) {
-//         echo "Record was not inserted Successfully due to ". mysqli_error($incomeResult);
-//     }
-// }
-// $sql_expense_data = "SELECT * FROM `expense`";
-// $result_expense_data = mysqli_query($conn, $sql_expense_data);
-// $sql_income_data = "SELECT * FROM `income`";
-// $result_income_data = mysqli_query($conn, $sql_income_data);
+    include'_dbconnect.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['expense'])) {
+        $expense = $_POST['expense'];
+    }else{
+        $expense = "";
+    }
+    $expenseSql = "INSERT INTO `expense` (`catagory`) VALUES ('$expense')";
+    $expenseResult = mysqli_query($conn, $expenseSql);   
+    if (!$expenseResult) {
+        echo "Record was not inserted Successfully due to ". mysqli_error($expenseResult);
+    }
+    if (isset($_POST['income'])) {
+        $income = $_POST['income'];
+    }else{
+        $income = "";
+    }
+    $incomeSql = "INSERT INTO `income` (`catagory`) VALUES ('$income')";
+    $incomeResult = mysqli_query($conn, $incomeSql);   
+    if (!$incomeResult) {
+        echo "Record was not inserted Successfully due to ". mysqli_error($incomeResult);
+    }
+}
+$sql_expense_data = "SELECT * FROM `expense`";
+$result_expense_data = mysqli_query($conn, $sql_expense_data);
+$sql_income_data = "SELECT * FROM `income`";
+$result_income_data = mysqli_query($conn, $sql_income_data);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -125,11 +125,11 @@
                         </li>
                         <li>
                             <?php
-                            // if(mysqli_num_rows($result_expense_data) > 0) {
-                            //   while ($row = mysqli_fetch_assoc($result_expense_data)) {
-                            //     echo '<p>' . $row['catagory']. '</p>';
-                            //   }
-                            // }
+                            if(mysqli_num_rows($result_expense_data) > 0) {
+                              while ($row = mysqli_fetch_assoc($result_expense_data)) {
+                                echo '<p>' . $row['catagory']. '</p>';
+                              }
+                            }
                          ?>
                         </li>
                     </ul>
@@ -154,11 +154,11 @@
                         </li>
                         <li>
                             <?php
-                            // if(mysqli_num_rows($result_income_data) > 0) {
-                            //   while ($row = mysqli_fetch_assoc($result_income_data)) {
-                            //     echo '<p>' . $row['catagory']. '</p>';
-                            //   }
-                            // }
+                            if(mysqli_num_rows($result_income_data) > 0) {
+                              while ($row = mysqli_fetch_assoc($result_income_data)) {
+                                echo '<p>' . $row['catagory']. '</p>';
+                              }
+                            }
                          ?>
                         </li>
                     </ul>

@@ -1,6 +1,7 @@
 // For Show and Hide Popup box
 document.querySelector("#E_add").addEventListener("click", ()=>{
     document.querySelector("#Epopup").style.display= "flex";
+    // document.querySelector(".chart_container").style.index = "-1";
 })
 document.querySelector("#R_add").addEventListener("click", ()=>{
     document.querySelector("#Rpopup").style.display= "flex";
