@@ -1,22 +1,26 @@
 <?php
     include'_dbconnect.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['expense'])) {
+    if (isset($_POST['expense']) && isset($_POST['eAmount']) ) {
         $expense = $_POST['expense'];
+        $expenseAmount= $_POST["eAmount"];
     }else{
         $expense = "";
+        $expenseAmount= "";
     }
-    $expenseSql = "INSERT INTO `expense` (`catagory`) VALUES ('$expense')";
+    $expenseSql = "INSERT INTO `expense` (`catagory`, `amount`) VALUES ('$expense', '$expenseAmount')";
     $expenseResult = mysqli_query($conn, $expenseSql);   
     if (!$expenseResult) {
         echo "Record was not inserted Successfully due to ". mysqli_error($expenseResult);
     }
-    if (isset($_POST['income'])) {
+    if (isset($_POST['income']) && isset($_POST['iAmount'])) {
         $income = $_POST['income'];
+        $incomeAmount = $_POST['iAmount'];
     }else{
         $income = "";
+        $incomeAmount = ""; 
     }
-    $incomeSql = "INSERT INTO `income` (`catagory`) VALUES ('$income')";
+    $incomeSql = "INSERT INTO `income` (`catagory`, `amount`) VALUES ('$income', '$incomeAmount')";
     $incomeResult = mysqli_query($conn, $incomeSql);   
     if (!$incomeResult) {
         echo "Record was not inserted Successfully due to ". mysqli_error($incomeResult);
@@ -51,6 +55,10 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
                     <p>Enter Expense</p>
                     <input type="text" name="expense" id="expensepopup">
                 </div>
+                <div>
+                    <p>Enter Amount</p>
+                    <input type="number" name="eAmount" id="expensepopupAmount">
+                </div>
                 <div class="btn">
                     <button id="Eadd">ADD Expense</button>
                 </div>
@@ -70,8 +78,12 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
                     <p>Enter Income</p>
                     <input type="text" name="income" id="resourcepopup">
                 </div>
+                <div>
+                    <p>Enter Amount</p>
+                    <input type="number" name="iAmount" id="resourcepopupAmount">
+                </div>
                 <div class="btn">
-                    <button id="Radd">ADD Resource</button>
+                    <button id="Radd">ADD Income</button>
                 </div>
             </form>
         </div>
@@ -108,7 +120,7 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
                 </div>
                 <div class="list Elist">
                     <ul>
-                        <li>
+                        <!-- <li>
                             <p>Food Expensive</p>
                         </li>
                         <li>
@@ -122,7 +134,7 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
                         </li>
                         <li>
                             <p>Electricity Expensive</p>
-                        </li>
+                        </li> -->
                         <li>
                             <?php
                             if(mysqli_num_rows($result_expense_data) > 0) {
@@ -146,12 +158,12 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
                 </div>
                 <div class="list Rlist">
                     <ul>
-                        <li>
+                        <!-- <li>
                             <p>Salary</p>
                         </li>
                         <li>
                             <p>Buisness Profit</p>
-                        </li>
+                        </li> -->
                         <li>
                             <?php
                             if(mysqli_num_rows($result_income_data) > 0) {
@@ -174,9 +186,23 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
                     <div class="heading">
                         <p> Expense</p>
                     </div>
-                    <div>
+                    <div class= "expenseLine">
                         <ul>
                             <li class="line">
+                            <?php
+                            if(mysqli_num_rows($result_expense_data) > 0) {
+                              while ($row = mysqli_fetch_assoc($result_expense_data)) {
+                                echo '<p>' . $row['catagory']. '</p>';
+                                // echo '<div>' . $row['amount']. '</div>';
+                              }
+                            }
+                         ?>
+                            </li>
+                           <!-- <li class="line">
+                                <div>Food Expense</div>
+                                <div>2000</div>
+                            </li> -->
+                            <!-- <li class="line">
                                 <div>Food Expense</div>
                                 <div>2000</div>
                             </li>
@@ -195,7 +221,7 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
                             <li class="line">
                                 <div>Electricity Expense</div>
                                 <div>4500</div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -205,7 +231,7 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
                     </div>
                     <div>
                         <ul>
-                            <li class="line">
+                            <!-- <li class="line">
                                 <div>Salary</div>
                                 <div>2000</div>
                             </li>
@@ -216,7 +242,17 @@ $result_income_data = mysqli_query($conn, $sql_income_data);
                             <li class="line">
                                 <div>Others</div>
                                 <div>5000</div>
-                            </li>
+                            </li> -->
+                            <li class="line">
+                            <?php
+                            if(mysqli_num_rows($result_income_data) > 0) {
+                              while ($row = mysqli_fetch_assoc($result_income_data)) {
+                                echo '<div>' . $row['catagory']. '</div>';
+                                echo '<div>' . $row['amount']. '</div>';
+                              }
+                            }
+                         ?>
+                            </li> 
                         </ul>
                     </div>
                 </div>

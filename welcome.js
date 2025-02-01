@@ -18,14 +18,21 @@ document.querySelector("#Rclose").addEventListener("click", ()=>{
 // For Adding new field from Popup to List
 let expenseButton = document.getElementById('Eadd');
 let expenseInput = document.getElementById('expensepopup');
+let expenseInputAmount = document.getElementById('expensepopupAmount');
 let resourceButton = document.getElementById('Radd');
 let resourceInput = document.querySelector('#resourcepopup');
+let resourceInputAmount = document.querySelector('#resourcepopupAmount');
 
 expenseButton.addEventListener('click', () => {
   let expenseName = expenseInput.value;
+  let expenseNameAmount = expenseInputAmount.value;
 
   document.querySelector(".Elist ul").innerHTML += `<li>
             <p>${expenseName}</p>
+        </li>`;
+  document.querySelector(".expenseLine ul").innerHTML += `<li>
+            <p>${expenseName}</p>
+            <p>${expenseNameAmount}</p>
         </li>`;
        
     document.querySelector("#Epopup").style.display= "none";
@@ -44,4 +51,5 @@ resourceButton.addEventListener('click', () => {
             // resourceInput.value="";
     });
           
+
           
