@@ -19,9 +19,9 @@ document.querySelector("#Rclose").addEventListener("click", ()=>{
 let expenseButton = document.getElementById('Eadd');
 let expenseInput = document.getElementById('expensepopup');
 let expenseInputAmount = document.getElementById('expensepopupAmount');
-let resourceButton = document.getElementById('Radd');
-let resourceInput = document.querySelector('#resourcepopup');
-let resourceInputAmount = document.querySelector('#resourcepopupAmount');
+let incomeButton = document.getElementById('Radd');
+let incomeInput = document.querySelector('#resourcepopup');
+let incomeInputAmount = document.querySelector('#resourcepopupAmount');
 
 expenseButton.addEventListener('click', () => {
   let expenseName = expenseInput.value;
@@ -30,10 +30,10 @@ expenseButton.addEventListener('click', () => {
   document.querySelector(".Elist ul").innerHTML += `<li>
             <p>${expenseName}</p>
         </li>`;
-  document.querySelector(".expenseLine ul").innerHTML += `<li>
-            <p>${expenseName}</p>
-            <p>${expenseNameAmount}</p>
-        </li>`;
+//   document.querySelector(".expenseLine ul").innerHTML += `<li class="line">
+//             <div>${expenseName}</div>
+//             <div>${expenseNameAmount}</div>
+//         </li>`;
        
     document.querySelector("#Epopup").style.display= "none";
     // expenseInput.value="";
@@ -42,11 +42,16 @@ expenseButton.addEventListener('click', () => {
 });
 
 resourceButton.addEventListener('click', () => {
-    let resourceName = resourceInput.value;
-   
+    let incomeName = incomeInput.value;
+    let incomeNameAmount = incomeInputAmount.income
     document.querySelector(".Rlist ul").innerHTML += `<li>
-            <p>${resourceName}</p>
+            <p>${incomeName}</p>
             </li>`;
+
+        //     document.querySelector(".incomeLine ul").innerHTML += `<li class="line">
+        //     <div>${incomeName}</div>
+        //     <div>${incomeNameAmount}</div>
+        // </li>`;
             document.querySelector("#Rpopup").style.display= "none";
             // resourceInput.value="";
     });
