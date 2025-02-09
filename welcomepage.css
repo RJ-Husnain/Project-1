@@ -70,7 +70,7 @@ body{
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 15px 10px;
+    padding: 15px 30px;
     height: 50px;
     color: white;
     
@@ -81,27 +81,40 @@ body{
     align-items: center;
     justify-content: center;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
 }
 .navigation ul a{
     text-decoration: none;
     color: white;
     font-size: 16px;
+    font-weight: 500;
+  }
+  .navigation ul a:hover{
+  color: rgb(3, 44, 97);
+    text-decoration: underline;
+    /* font-size: 17px; */
 }
-.navigation ul .logo{
+ .logo span{
+  color: white;
+  font-size: 22px;
+}
+
+.logo img{
+  width: 20px;
+  display: none;
+}
+.logo{
   font-family: "Russo One", serif;
   letter-spacing: 1px;
   font-weight: 500;
   font-size: 18px;
   color: rgb(3, 44, 97);
   padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
-.navigation ul .logo span{
-  color: white;
-  font-size: 22px;
-}
-
-
 /* buttons */
 .buttons{
     display: flex;
@@ -118,7 +131,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 2px;
-    padding: 4px 6px;
+    padding: 3.8px 6px;
     background-color: white;
     border: none;
     border-radius: 4px;
@@ -288,6 +301,7 @@ font-weight: 400;
   border-radius: 20px;  
   padding: 12px 20px;
   font-size: 16px;
+  cursor: pointer;
 }
 /* Graph */
 .graphBox {
@@ -361,7 +375,7 @@ font-weight: 400;
 }
 
 .bar {
-  width: 30px;
+  width: 27px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -372,6 +386,7 @@ font-weight: 400;
   background-color: #597be9;
   border-radius: 4px;
   transition: 0.3s ease;
+  box-shadow: 1px 1px 10px rgb(185, 185, 185);
 }
 
 .bar .bar-inner {
@@ -402,4 +417,102 @@ font-weight: 400;
   font-size: 12px;
   margin-top: 40px;
   margin-right: 4px;
+}
+
+
+@media screen and (max-width: 1350px) {
+  body {
+    background-color: rgb(54, 194, 54);
+  }
+  .logo img{
+    display: block;
+  }
+  .navigation ul a {
+    font-size: 14px;
+}
+  .sidebar{
+    position: absolute;
+    left :-400px;
+    transition: all 0.5s ease-in;
+    width: 37%;
+    height: 100%;
+    top: 50px;
+  }
+  .actualPage {
+    width: 107vw;
+  }
+  .boxActualpage {
+    width: 32.5%;
+  }
+  .containerBox {
+    gap: 5px;
+  }
+  .line {
+    gap: 33px;
+    font-size: 14px;
+  }
+  .btnbar {
+    height: 94%;
+  }
+  .chart-container {
+    width: 95%;
+    padding: 18px;
+  }
+  .graphBox .graphbar .expense, .graphBox .graphbar .income {
+    width: 51%;
+  }
+  .bar{
+    width: 20px;
+  }
+  .bar-label {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 830px){
+body{
+  background-color: aquamarine;
+}
+
+.navigation{
+  display: none;
+}
+    .line {
+      gap: 140px;
+      font-size: 13px;
+}
+.quickAccess .heading {
+  margin-bottom: 5px;
+}
+.btnbar button {
+  padding: 8px 10px;
+  font-size: 13px;
+}
+.bar {
+  width: 16px;
+}
+.title {
+  margin-bottom: 22px;
+}
+.containerBox {
+  gap: 15px;
+  min-height: 74%;
+  flex-direction: column;
+  padding: 18px;
+} 
+.boxActualpage {
+  width: 100%;
+}
+.graphBox {
+  height: 100%;
+}
+.graphBox .graphbar {
+  flex-direction: column;
+}
+.chart-container {
+  width: 195%;
+}
+.sidebar{
+  font-size: 14px;
+  width: 41%;
+}
 }

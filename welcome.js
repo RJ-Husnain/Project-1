@@ -1,16 +1,21 @@
 // For Show and Hide Popup box
-document.querySelector("#E_add").addEventListener("click", ()=>{
-    document.querySelector("#Epopup").style.display= "flex";
-    // document.querySelector(".chart_container").style.index = "-1";
+quickExpense.addEventListener("click", () => {
+    document.querySelector("#Epopup").style.display = "flex";
 })
-document.querySelector("#R_add").addEventListener("click", ()=>{
-    document.querySelector("#Rpopup").style.display= "flex";
+quickIncome.addEventListener("click", () => {
+    document.querySelector("#Rpopup").style.display = "flex";
 })
-document.querySelector("#Eclose").addEventListener("click", ()=>{
-    document.querySelector("#Epopup").style.display= "none";
+document.querySelector("#E_add").addEventListener("click", () => {
+    document.querySelector("#Epopup").style.display = "flex";
 })
-document.querySelector("#Rclose").addEventListener("click", ()=>{
-  document.querySelector("#Rpopup").style.display= "none";
+document.querySelector("#R_add").addEventListener("click", () => {
+    document.querySelector("#Rpopup").style.display = "flex";
+})
+document.querySelector("#Eclose").addEventListener("click", () => {
+    document.querySelector("#Epopup").style.display = "none";
+})
+document.querySelector("#Rclose").addEventListener("click", () => {
+    document.querySelector("#Rpopup").style.display = "none";
 })
 
 
@@ -24,37 +29,38 @@ let incomeInput = document.querySelector('#resourcepopup');
 let incomeInputAmount = document.querySelector('#resourcepopupAmount');
 
 expenseButton.addEventListener('click', () => {
-  let expenseName = expenseInput.value;
-  let expenseNameAmount = expenseInputAmount.value;
+    let expenseName = expenseInput.value;
+    let expenseNameAmount = expenseInputAmount.value;
 
-  document.querySelector(".Elist ul").innerHTML += `<li>
+    document.querySelector(".Elist ul").innerHTML += `<li>
             <p>${expenseName}</p>
         </li>`;
-//   document.querySelector(".expenseLine ul").innerHTML += `<li class="line">
-//             <div>${expenseName}</div>
-//             <div>${expenseNameAmount}</div>
-//         </li>`;
-       
-    document.querySelector("#Epopup").style.display= "none";
+
+
+    document.querySelector("#Epopup").style.display = "none";
     // expenseInput.value="";
-    
-    
+
+
 });
 
-resourceButton.addEventListener('click', () => {
+incomeButton.addEventListener('click', () => {
     let incomeName = incomeInput.value;
     let incomeNameAmount = incomeInputAmount.income
     document.querySelector(".Rlist ul").innerHTML += `<li>
             <p>${incomeName}</p>
             </li>`;
+    document.querySelector("#Rpopup").style.display = "none";
+});
 
-        //     document.querySelector(".incomeLine ul").innerHTML += `<li class="line">
-        //     <div>${incomeName}</div>
-        //     <div>${incomeNameAmount}</div>
-        // </li>`;
-            document.querySelector("#Rpopup").style.display= "none";
-            // resourceInput.value="";
-    });
-          
+// Hamburger Side bar
+hamburger.addEventListener('click', () => {
+    const sidebar = document.querySelector(".sidebar");
 
-          
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-400px";
+    } else {
+        sidebar.style.left = "0px";
+    }
+
+})
+

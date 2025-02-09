@@ -112,15 +112,16 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
     </div>
     <div class="navbar">
 
+        <div class="logo">
+            <img src="hamburger.svg" alt="hamburger" id="hamburger">
+            <p><span>E</span>xpensify</p>
+        </div>
         <div class="navigation">
             <ul>
-                <li>
-                    <div class="logo">
-                        <p><span>E</span>xpensify</p>
-                    </div>
-                </li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact us</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact us</a></li>
+            <!-- <li><a href="#">Services</a></li> -->
+            <li><a href="#">About us</a></li>
             </ul>
         </div>
         <div class="buttons">
@@ -275,9 +276,9 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
                     <p>Quick Access</p>
                 </div>
                 <div class="btnbar">
-                    <button>Add Expense</button>
-                    <button>Add Income</button>
-                    <button>Create Report</button>
+                    <button id="quickExpense">Add Expense</button>
+                    <button id="quickIncome">Add Income</button>
+                    <button id="quickReport">Create Report</button>
                 </div>
             </div>
             <div class="graphBox">
