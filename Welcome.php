@@ -40,15 +40,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$sql_expense_data = "SELECT * FROM `expense`";
-$result_expense_data = mysqli_query($conn, $sql_expense_data);
-$sql_expense_dataBox = "SELECT * FROM `expense`";
-$result_expense_dataBox = mysqli_query($conn, $sql_expense_dataBox);
+// $sql_expense_data = "SELECT * FROM `expense`";
+// $result_expense_data = mysqli_query($conn, $sql_expense_data);
+// $sql_expense_dataBox = "SELECT * FROM `expense`";
+// $result_expense_dataBox = mysqli_query($conn, $sql_expense_dataBox);
 
-$sql_income_data = "SELECT * FROM `income`";
-$result_income_data = mysqli_query($conn, $sql_income_data);
-$sql_income_dataBox = "SELECT * FROM `income`";
-$result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
+// $sql_income_data = "SELECT * FROM `income`";
+// $result_income_data = mysqli_query($conn, $sql_income_data);
+// $sql_income_dataBox = "SELECT * FROM `income`";
+// $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
 
 ?>
 <!DOCTYPE html>
