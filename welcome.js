@@ -55,12 +55,10 @@ incomeButton.addEventListener('click', () => {
 // Hamburger Side bar
 hamburger.addEventListener('click', () => {
     const sidebar = document.querySelector(".sidebar");
-
-    if (sidebar.style.left === "0px") {
-        sidebar.style.left = "-400px";
-    } else {
         sidebar.style.left = "0px";
-    }
-
+})
+sideCross.addEventListener('click', () => {
+    const sidebar = document.querySelector(".sidebar");
+        sidebar.style.left = "-700px";
 })
 
