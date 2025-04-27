@@ -1,13 +1,20 @@
 <?php 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            include '_dbconnect.php';
+            include 'connection/_dbconnect.php';
             $username_form = $_POST["username"];
             $email = $_POST["email"]; 
             
             $sql = "SELECT * FROM user WHERE username='$username_form' And email='$email'";
             $result = mysqli_query($conn, $sql); 
-            if (!(mysqli_num_rows($result) == 1)) {              
-                    $error_message = "Username is not found";
+            if (mysqli_num_rows($result) > 0){  
+                $row = mysqli_fetch_assoc($result);
+    $id= $row['sno'];            
+                header("Location: new_password.php?id=$id");
+                exit;
+            }
+            else{
+                echo"username doesn't exist";
+                // $error_message = "Username doesn't exist";
             }
         }
 ?>
@@ -17,7 +24,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forget Password</title>
-    <link rel="stylesheet" href="forget_password.css">
+    <link rel="stylesheet" href="css/forget_password.css">
 </head>
 <body>
     <div class="container flex">
@@ -28,7 +35,7 @@
         </div>
         <!-- form -->
         <div class="form">
-            <form action="new_password.php" method="GET">
+            <form action="forget_password.php" method="POST">
                 <!-- username -->
                 <div class="username_box flex">
                     <div>
@@ -55,7 +62,7 @@
         </div>
     </div>
     <div class="image_container flex">
-        <img src="Background.jpg" alt="background">
+        <img src="images/Background.jpg" alt="background">
     </div>
 </body>
 </html>

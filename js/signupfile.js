@@ -15,34 +15,34 @@ passwordInput.addEventListener('input', function() {
     let valid_password = true;
     // length 
     if (password.length >= 8) {
-        lengthicon.src = 'tick.png';
+        lengthicon.src = 'images/tick.png';
     } else {
-        lengthicon.src = 'cross.png';
+        lengthicon.src = 'images/cross.png';
         valid_password = false;
     }
     // uppercase 
     if (/[A-Z]/.test(password)) {
-        uppercaseicon.src = 'tick.png';
+        uppercaseicon.src = 'images/tick.png';
     } else {
-        uppercaseicon.src = 'cross.png';
+        uppercaseicon.src = 'images/cross.png';
     }
     // lowercase 
     if (/[a-z]/.test(password)) {
-        lowercaseicon.src = 'tick.png';
+        lowercaseicon.src = 'images/tick.png';
     } else {
-        lowercaseicon.src = 'cross.png';
+        lowercaseicon.src = 'images/cross.png';
     }
     // number 
     if (/[0-9]/.test(password)) {
-        numbericon.src = 'tick.png';
+        numbericon.src = 'images/tick.png';
     } else {
-        numbericon.src = 'cross.png';
+        numbericon.src = 'images/cross.png';
     }
     // symbol 
     if (/[!@#\$%\^\&*\)\(+=._-]/.test(password)) {
-        symbolicon.src = 'tick.png';
+        symbolicon.src = 'images/tick.png';
     } else {
-        symbolicon.src = 'cross.png';
+        symbolicon.src = 'images/cross.png';
     }
     if (!valid_password) {
         cpasswordInput.disabled = false;

@@ -1,5 +1,5 @@
 <?php
-include '_dbconnect.php';
+include 'connection/_dbconnect.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['submit'])) {
         // For Expense Data
@@ -58,7 +58,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="css/welcome.css">
     <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
@@ -68,7 +68,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
  <div id="Epopup" class="popup">
     <div class="overlay flex">
         <div class="form-box flex">
-            <img src="cross.svg" alt="Close" class="close" id="Eclose">
+            <img src="icons/cross.svg" alt="Close" class="close" id="Eclose">
             <form action="welcome.php" method="POST">
                 <h3>Add New Expense</h3>
                 <label for="expensepopup">Enter Expense</label>
@@ -88,7 +88,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
 <div id="Rpopup" class="popup">
     <div class="overlay flex">
         <div class="form-box flex">
-            <img src="cross.svg" alt="Close" class="close" id="Rclose">
+            <img src="icons/cross.svg" alt="Close" class="close" id="Rclose">
             <form action="welcome.php" method="POST">
                 <h3>Add New Income</h3>
                 <label for="resourcepopup">Enter Income</label>
@@ -128,8 +128,12 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
         </div>
         <!-- Buttons -->
         <div class="buttons flex">
-            <button class="loginBtn">Login</button>
-            <button class="signupBtn">Signup</button>
+            <a href="login.php">
+                <button class="loginBtn">Login</button>
+            </a>
+            <a href="signup.php">
+                <button class="signupBtn">Signup</button>
+            </a>
         </div>
     </div>
     <!-- boxContainer -->
@@ -156,7 +160,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
                 </div>
                 <div class="btn">
                     <button>
-                        <img src="plus.svg" alt="" id="E_add" class="add">
+                        <img src="icons/plus.svg" alt="" id="E_add" class="add">
                     </button>
                 </div>
             </div>
@@ -177,7 +181,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
                     </ul>
                 </div>
                 <div class="btn">
-                    <button><img src="plus.svg" alt="" id="R_add" class="add"></button>
+                    <button><img src="icons/plus.svg" alt="" id="R_add" class="add"></button>
                 </div>
             </div>
 
@@ -191,7 +195,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
 
                 <div class="graphContainer">
                     <div class="graphHeading flex">
-                        <img src="graph.png" alt="">
+                        <img src="images/graph.png" alt="">
                         <p>Graph Monitoring</p>
                     </div>
                     <div class="chart-container">
@@ -329,14 +333,14 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
 
                 <div class="flex totalBox">
                     <div class="totalExp totalItem flex">
-                        <img src="expense.png" alt="">
+                        <img src="images/expense.png" alt="">
                         <div>
                             <h2>Total Expense</h2>
                             <p>$ 1200</p>
                         </div>
                     </div>
                     <div class="totalInc totalItem flex">
-                        <img src="income.png" alt="">
+                        <img src="images/income.png" alt="">
                         <div>
                             <h2>Total Income</h2>
                             <p>$ 1200</p>
@@ -344,7 +348,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
                     </div>
     
                     <div class="totalbal totalItem flex">
-                        <img src="balance.png" alt="">
+                        <img src="images/balance.png" alt="">
                         <div>
                             <h2>Total Balance</h2>
                             <p>$ 1200</p>
@@ -356,7 +360,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
             <div class="balanceContainer flex">
                 <div class="actionBox flex">
                     <div class="actionHeading flex">
-                        <img src="action.png" alt="">
+                        <img src="images/action.png" alt="">
                         <p>Quick Access</p>
                     </div>
                     
@@ -368,7 +372,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
                 </div>
                 <div class="expenseBox box">
                     <div class="heading flex">
-                        <img src="expense.png" alt="">
+                        <img src="images/expense.png" alt="">
                         <h2>Expense</h2>
                     </div>
 
@@ -409,7 +413,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
                 </div>
                 <div class="incomeBox box">
                     <div class="heading flex">
-                        <img src="income.png" alt="">
+                        <img src="images/income.png" alt="">
                         <h2>Income</h2>
                     </div>
                     <div class="content">
@@ -448,7 +452,7 @@ $result_income_dataBox = mysqli_query($conn, $sql_income_dataBox);
         </div>
     </div>
 
-    <script src="welcome.js"></script>
+    <script src="js/welcome.js"></script>
 </body>
 
 </html>

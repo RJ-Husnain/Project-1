@@ -1,5 +1,5 @@
 <?php 
-    include '_dbconnect.php';
+    include 'connection/_dbconnect.php';
     session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username_form = $_POST["username"];
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['name']= $name;
             $_SESSION['username']= $username_form;
  
-            header("Location: welcome.php?name=" . urlencode($name));
+            header("Location: welcome.php");
             exit();
         } else {
             $usernameError= "Incorrect password.";
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="loginpage.css">
+    <link rel="stylesheet" href="css/loginpage.css">
 </head>
 <body>
     <div class="container flex">
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <!-- form -->
         <div class="form">
-            <form action="login.php" method="post">
+            <form action="login.php" method="POST">
                 <!-- username -->
                 <div class="username_box flex">
                     <div>
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <div class="image_container flex">
-        <img src="Background.jpg" alt="background">
+        <img src="images/Background.jpg" alt="background">
     </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-include'_dbconnect.php';
+include'connection/_dbconnect.php';
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST['gender'];
     $country = $_POST['country'];
     $interest = $_POST['interest'];
+    $usernameError;
     
     $check_sql = "SELECT * FROM user WHERE username='$username_form'";
     $check_result = mysqli_query($conn, $check_sql);
@@ -41,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="signupfile.css">
+    <link rel="stylesheet" href="css/signupfile.css">
 </head>
 
 <body>
@@ -78,10 +79,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo '<div class="erroruser">' . $usernameError . '</div>';
                 }
                 ?>
-            <!-- username lenght error -->
-            <div class="error errorlenght">
-                <p>username minimum lenght is 8 character</p>
-            </div>
             
             <!-- password -->
             <label for="password">Password:</label>
@@ -89,23 +86,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- Password requirement -->
             <div class="flex" >     
                 <div class="pass_req flex" id="length">
-                <img src="cross.png" alt="icon" class="icon" id='length-icon'>
+                <img src="images/cross.png" alt="icon" class="icon" id='length-icon'>
                 <p>Password contain 8 Character.</p>
                 </div>
                 <div class="pass_req flex" id="uppercase">
-                <img src="cross.png" alt="icon" class="icon" id='uppercase-icon'>
+                <img src="images/cross.png" alt="icon" class="icon" id='uppercase-icon'>
                 <p>Password contain any UpperCase Letter.</p>
                 </div>
                 <div class="pass_req flex" id="lowercase">
-                <img src="cross.png" alt="icon" class="icon" id='lowercase-icon'>
+                <img src="images/cross.png" alt="icon" class="icon" id='lowercase-icon'>
                 <p>Password contain any lower case letter.</p>
                 </div>
                 <div class="pass_req flex" id="digit">
-                <img src="cross.png" alt="icon" class="icon" id='digit-icon'>
+                <img src="images/cross.png" alt="icon" class="icon" id='digit-icon'>
                 <p>Password contain any Digit.</p>
                 </div>
                 <div class="pass_req flex" id="symbol">
-                <img src="cross.png" alt="icon" class="icon" id='symbol-icon'>
+                <img src="images/cross.png" alt="icon" class="icon" id='symbol-icon'>
                 <p>Password contain any Special Symbol.</p>
                 </div>
             </div>
@@ -113,6 +110,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- confirm password -->
             <label for="cpassword">Confirm Password:</label>
             <input type="password" id="cpassword" name="cpassword" required>
+
+            <div class="error">Password doesn't Match</div>
 
             <!-- country -->
             <label for="country">Choose a country:</label>
@@ -154,9 +153,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <div class="image_container flex">
-        <img src="Background.jpg" alt="background">
+        <img src="images/Background.jpg" alt="background">
     </div>
-    <script src="signupfile.js"></script>
+    <script src="js/signupfile.js"></script>
 </body>
 
 </html>
